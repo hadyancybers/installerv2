@@ -1,0 +1,185 @@
+#!/bin/bash
+#Jangan Lupa Follow Insta @Hadyan_Cyber
+
+#Variables
+b="\033[1m"
+u="\033[4m"
+bl="\033[30m"
+r="\033[31m"
+g="\033[32m"
+bu="\033[34m"
+m="\033[35m"
+c="\033[36m"
+w="\033[37m"
+endc="\033[0m"
+enda="\033[0m"
+blue="\033[1;34m"
+cyan="\033[1;36m"
+red="\033[1;31m"
+
+figlet UNICOM | lolcat
+
+echo "_____________________________________________________________"
+echo "Tools    : Kumpulan Tools  Installer $white                         " |lolcat
+echo "Creadby  : Mr.Xvanders                                      " |lolcat
+echo "Contact  : 0831xxxxxxxx   $white                             " |lolcat
+echo "_____________________________________________________________"
+
+###################################################
+# CTRL + C
+###################################################
+trap ctrl_c INT
+ctrl_c() {
+clear
+echo $red"[#]> (Ctrl + C ) Detected, Trying To Exit ... "
+echo $cyan"[#]> Thanks"
+sleep 1
+echo ""
+echo $white"[#]> Jangan Di Perjual Belikan Yang Buat Tools Bukan Kamu :V"
+sleep 1
+exit
+}
+
+lagi=1
+while [ $lagi -lt 6 ];
+do
+echo ""
+echo $b "1.  Nmap${enda}";
+echo "============================" | lolcat
+echo $r "2.  Admin-finder${endc}";
+echo "============================" | lolcat
+echo $g "3.  RED_HAWK${endc}";
+echo "============================" | lolcat
+echo $c "4   Lazymux${endc}";
+echo "============================" | lolcat
+echo $r "5.  Tools-X${endc}";
+echo "============================" | lolcat
+echo $r "6.  DDoS${endc}";
+echo "============================" | lolcat
+echo $g "7.  Trojans${endc}";
+echo "============================" | lolcat
+echo $y "8.   Ddos_Lucita${endc}";
+echo "============================" | lolcat
+echo $g "9.   Deface${endc}";
+echo "============================" | lolcat
+echo $c "10. Exit Lur${endc}";
+echo ""
+echo "╭─Mr.Xvanders" |lolcat
+read -p "╰─#" pil;
+
+# Nmap
+
+case $pil in
+1) pkg install nmap
+echo "${y} {1} Masukkan Web${endc}:"
+read web
+nmap $web
+echo
+
+;;
+
+# admin-finder
+
+2) git clone  https://github.com/the-c0d3r/admin-finder.git
+echo -e "${y} cara menggunakan admin finder"
+echo -e "${y} cd admin-finder"
+echo -e "${y} python admin-finder.py"
+cd /data/data/com.termux/files/home/admin-finder/
+python2 /data/data/com.termux/files/home/admin-finder/admin-finder.py
+echo
+
+;;
+
+#RED_HAWK
+
+3) git clone https://github.com/Tuhinshubhra/RED_HAWK
+echo -e "${y} Installer RED_HAWK..."
+echo -e "${y} cd RED_HAWK"
+echo -e "${y} php RED_HAWK.php"
+cd /data/data/com.termux/files/home/RED_HAWK/
+php /data/data/com.termux/files/home/RED_HAWK/ RED_HAWK.php
+
+;;
+
+#Lazymux
+
+4) git clone https://github.com/Gameye98/Lazymux
+echo "${y} Installer Lazymux..."
+echo "${y} cd Lazymux"
+echo "${y} python lazymux.py"
+cd /data/data/com.termux/files/home/Lazymux/
+python2 /data/data/com.termux/files/home/Lazymux/ lazymux.py
+
+;;
+
+#Tools-X
+
+5) git clone https://github.com/Rajkumrdusad/Tool-X
+echo "${y} Installer Tool-X..."
+echo "${y} cd Tool-X"
+echo "${y} sh install.aex"
+cd /data/data/com.termux/files/home/Tool-X
+bash /data/data/com.termux/files/home/Tool-X/sh install.aex
+
+;;
+
+#DDoS
+
+6) git clone https://github.com/cyweb/hammer
+echo "${y} cd hammer"
+echo "${y} chmod +x hammer.py"
+echo "${y} python hammer.py"
+cd /data/data/com.termux/files/home/hammer
+bash /data/data/com.termux/files/home/hammer/python hammer.py
+
+;;
+
+#Trojan
+
+7) git clone https://github.com/R133F/Trojans
+echo "${y} cd Trojans"
+echo "${y} python2 Trojans.py"
+cd /data/data/com.termux/files/home/Trojans
+bash /data/data/com.termux/files/home/Trojans/python2 Trojans.py
+
+;;
+
+#DDos Lucita
+
+8) git clone https://github.com/zlucifer/lucita_ddos
+echo "${y} cd lucita_ddos"
+echo "${y} chmod +x pukul.py"
+echo "${y} python pukul.py"
+cd /data/data/com.termux/files/home/lucita_ddos
+bash/data/data/com.termux/files/home/pukul/python pukul.py
+
+;;
+
+#Deface
+
+9) git clone https://github.com/404rgr/webdav77
+echo "${y} cd webdav77"
+echo "${y} sh install.sh"
+cd /data/data/com.termux/files/home/webdav77
+bash/data/data/com.termux/files/home/webdav77/sh install.sh
+
+;;
+
+
+10)echo $green"Terimakasih"
+clear
+sleep 2
+figlet Hadyan | lolcat
+sleep 2
+echo $green"Terima Kasih Telah Menggunakan Tools Sederhana Ini"
+sleep 2
+echo $cyan"Buat Yang Mau Mentahan Script Bagi Member UNICOM Silakan Chat Admin"
+figlet Bye | lolcat
+figlet By Hady | lolcat
+exit
+;;
+
+*) echo "eh sorry ya guys, pilihan yang kamu cari tidak tersedia"
+esac
+done
+selesai
